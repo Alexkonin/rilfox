@@ -419,8 +419,8 @@
 @container (min-width: 801px) {
  #rf-scene .scene-visual {
   --scene-height: max(var(--scene-min), 100cqh);
-  --art-area: calc(var(--scene-height) + clamp(48px, 9svh, 76px));
-  --art-start: clamp(-48px, calc((var(--scene-height) - 520px) / 4), 0px);
+  --art-area: calc(var(--scene-height) + clamp(48px, 12svh, 102px));
+  --art-start: clamp(-62px, calc((var(--scene-height) - 570px) / 4), 0px);
   --art-width: min(90cqw, calc((var(--art-area) - var(--art-start)) * 16 / 9));
   --art-height: calc(var(--art-width) * 9 / 16);
   --art-top: max(var(--art-start), calc((var(--art-area) - var(--art-height) + var(--art-start)) / 2));
@@ -432,6 +432,10 @@
  }
  #rf-scene .float-products {top: max(0px, calc(var(--art-top) + var(--art-height) * .38 - 38px));}
  #rf-scene .float-companies {top: calc(var(--art-top) + var(--art-height) * .73 - 38px); bottom: auto;}
+ @media (max-height: 540px) {
+  #rf-scene .floating-product {padding: 12px 14px; gap: 10px;}
+  #rf-scene .float-companies {top: calc(var(--art-top) + var(--art-height) * .68 - 42px);}
+ }
 }
 @container (max-width: 600px) {
  #rf-scene header {padding-block: 14px; row-gap: 12px;}
