@@ -250,7 +250,7 @@
 @container(max-width:600px){
  #rf-scene .closing .primary{gap:14px;padding:14px 18px}
 }
-/* Each chapter uses the browser's visible height as its starting size. */
+/* The hero, workshop and contact sections start at the visible height. */
 #rf-scene {
  --screen-height: 100svh;
  --chapter-height: calc(var(--screen-height) - var(--header-height, 96px));
@@ -299,13 +299,8 @@
 }
 #rf-scene .preview-dock {margin-top: clamp(3px, 2svh, 22px);}
 #rf-scene #rf-scene-about {scroll-margin-block-start: 12px;}
-#rf-scene :is(.products, .workshop-screen, .contact-screen) {
+#rf-scene :is(.workshop-screen, .contact-screen) {
  min-block-size: var(--chapter-height);
-}
-#rf-scene .products {
- display: flex;
- flex-direction: column;
- justify-content: center;
 }
 #rf-scene .workshop-screen {
  display: grid;
@@ -484,6 +479,8 @@
  #rf-scene .floating-product small {white-space: nowrap;}
 }
 /* Otklik showcase and product page. */
+#rf-scene .page-products {display: flex; flex-direction: column; min-block-size: 100svh;}
+#rf-scene .page-products footer {margin-top: auto;}
 #rf-scene .otklik-card {
  border: 1px solid #D9E1DD;
  border-radius: 20px;
