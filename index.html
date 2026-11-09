@@ -559,11 +559,13 @@
 #rf-scene .ok-product {background:#fff; font-size:16px; line-height:1.6;}
 #rf-scene .ok-product-nav {
  display:flex; align-items:center; justify-content:space-between; gap:20px;
- padding:16px clamp(20px,4vw,64px); border-bottom:1px solid #E8E5E1;
+ padding:16px 28px; border-bottom:1px solid #E8E5E1; background:#fff;
 }
-#rf-scene .ok-brand {font-weight:800; letter-spacing:-.04em; font-size:20px; white-space:nowrap;}
-#rf-scene .ok-product-nav nav {display:flex; gap:clamp(12px,2vw,28px); align-items:center;}
-#rf-scene .ok-product-nav nav a {font-size:13px; padding:7px 0; border-bottom:2px solid transparent; white-space:nowrap;}
+#rf-scene .ok-brand {display:flex; align-items:center; gap:12px; white-space:nowrap;}
+#rf-scene .ok-brand span {font-size:15px; font-weight:700; padding-left:12px; border-left:1px solid #DADFDA;}
+#rf-scene .ok-product-nav nav {display:flex; gap:clamp(12px,2vw,28px); align-items:center; background:transparent; color:var(--ink); padding:0; border-radius:0; box-shadow:none;}
+#rf-scene .ok-product-nav nav::before {display:none;}
+#rf-scene .ok-product-nav nav a {font-size:13px; padding:7px 0; border-radius:0; border-bottom:2px solid transparent; white-space:nowrap;}
 #rf-scene .ok-product-nav nav a[aria-current] {border-color:var(--orange); font-weight:800;}
 #rf-scene .ok-product-nav nav a:hover {border-color:var(--orange);}
 #rf-scene .ok-hero {
@@ -667,7 +669,7 @@
 
 @container(max-width:900px) {
  #rf-scene .ok-product-nav {flex-wrap:wrap; gap:10px;}
- #rf-scene .ok-product-nav nav {flex-wrap:wrap;}
+ #rf-scene .ok-product-nav nav {order:3; width:100%; justify-content:center; flex-wrap:wrap;}
  #rf-scene .ok-hero-copy {padding:28px;}
  #rf-scene .ok-intro {font-size:15px;}
  #rf-scene .ok-hero-visual {padding:28px 18px 18px;}
@@ -680,7 +682,6 @@
 }
 @container(max-width:800px) {
  #rf-scene .ok-product-nav {padding:14px 20px;}
- #rf-scene .ok-brand {font-size:18px;}
  #rf-scene .ok-product-nav nav {gap:8px 17px;}
  #rf-scene .ok-product-nav nav a {font-size:12px;}
  #rf-scene .ok-hero {grid-template-columns:1fr; margin:12px; border-radius:10px;}
